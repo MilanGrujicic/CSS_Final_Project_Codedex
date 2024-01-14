@@ -1,0 +1,21 @@
+@font-face {
+    font-family: rubnik;
+    src: url('fonts/Rubik_Burned/RubikBurned-Regular.ttf')
+}
+
+body {
+    background-color: #1e062d;
+}
+nav {
+    height: 380px;
+}
+#menu2 {
+    height: 380px;
+    margin-bottom: 110px;
+}
+
+#menu3 {
+    height: 480px;
+    margin-bottom: 60px;
+    padding-right: 100px;
+}
