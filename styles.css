@@ -1,21 +1,35 @@
 @font-face {
-    font-family: rubnik;
-    src: url('fonts/Rubik_Burned/RubikBurned-Regular.ttf')
+    font-family: tektur;
+    src: url('fonts/Tektur/Tektur-VariableFont_wdth\,wght.ttf')
 }
 
 body {
-    background-color: #1e062d;
-}
-nav {
-    height: 380px;
-}
-#menu2 {
-    height: 380px;
-    margin-bottom: 110px;
+    background-color: #27262e;
+    margin: 0;
+    font-family: tektur;
 }
 
-#menu3 {
-    height: 480px;
-    margin-bottom: 60px;
-    padding-right: 100px;
+nav {
+    text-align: center;
+  }
+
+ul {
+    display: inline-block;
+}
+
+li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 50px 0 50px;
+}
+
+li a{
+    color: #14bece;
+    font-size: 50px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #f57a29;
+    font-weight: bold;
 }
