@@ -7,7 +7,14 @@ body {
     background-color: #27262e;
     margin: 0;
     font-family: tektur;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
 }
+
+main {
+    flex: 1; /* Allow main content to take remaining vertical space */
+  }
 
 nav {
     text-align: center;
@@ -29,7 +36,56 @@ li a{
     text-decoration: none;
 }
 
-li a:hover {
+a {
+    color: #d7f9f8;
+    text-decoration: none;
+}
+
+a:hover {
     color: #f57a29;
     font-weight: bold;
 }
+
+h1 {
+    padding: 0% 0 0 1%;
+}
+
+p, h1 {
+    color: #d7f9f8;
+}
+
+div > p {
+    text-align: center;
+    font-size: 45px;
+    padding: 0 13% 0 13%;
+    margin: 40px;
+}
+
+.page_header {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    height: 150px;
+}
+
+.page_header h1 {
+    display: inline; /* Make h1 inline */
+    margin-right: 10px; /* Add some space between h1 and img */
+}
+
+.page_header img {
+    height: 200px;
+    padding-left: 1%;
+}
+
+footer {
+    color: #fff;
+    padding: 7% 0 0 1%;
+  }
+
+#bottom-right-image {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px; /* Optional margin for spacing */
+  }
+
