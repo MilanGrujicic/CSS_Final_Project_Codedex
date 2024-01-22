@@ -4,6 +4,67 @@
     font-display: swap;
   }
 
+  @keyframes glitch {
+    0% {
+      clip-path: var(--clip-one);
+    }
+    2%, 8% {
+      clip-path: var(--clip-two);
+      transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+    }
+    6% {
+      clip-path: var(--clip-two);
+      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+    9% {
+      clip-path: var(--clip-two);
+      transform: translate(0, 0);
+    }
+    10% {
+      clip-path: var(--clip-three);
+      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+    13% {
+      clip-path: var(--clip-three);
+      transform: translate(0, 0);
+    }
+    14%, 21% {
+      clip-path: var(--clip-four);
+      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+    25% {
+      clip-path: var(--clip-five);
+      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+    30% {
+      clip-path: var(--clip-five);
+      transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+    }
+    35%, 45% {
+      clip-path: var(--clip-six);
+      transform: translate(calc(var(--shimmy-distance) * -1%));
+    }
+    40% {
+      clip-path: var(--clip-six);
+      transform: translate(calc(var(--shimmy-distance) * 1%));
+    }
+    50% {
+      clip-path: var(--clip-six);
+      transform: translate(0, 0);
+    }
+    55% {
+      clip-path: var(--clip-seven);
+      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+    60% {
+      clip-path: var(--clip-seven);
+      transform: translate(0, 0);
+    }
+    31%, 61%, 100% {
+      clip-path: var(--clip-four);
+    }
+  }
+
 @keyframes rainbow{
     100%,0%{
         color: rgb(255,0,0);
@@ -71,7 +132,7 @@ li{
 }
 
 li a{
-    color: #14bece;
+    color: #d7f9f8;
     font-size: 50px;
     text-decoration: none;
 }
@@ -308,67 +369,6 @@ footer {
     z-index: -1;
   }
   
-  @keyframes glitch {
-    0% {
-      clip-path: var(--clip-one);
-    }
-    2%, 8% {
-      clip-path: var(--clip-two);
-      transform: translate(calc(var(--shimmy-distance) * -1%), 0);
-    }
-    6% {
-      clip-path: var(--clip-two);
-      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
-    }
-    9% {
-      clip-path: var(--clip-two);
-      transform: translate(0, 0);
-    }
-    10% {
-      clip-path: var(--clip-three);
-      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
-    }
-    13% {
-      clip-path: var(--clip-three);
-      transform: translate(0, 0);
-    }
-    14%, 21% {
-      clip-path: var(--clip-four);
-      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
-    }
-    25% {
-      clip-path: var(--clip-five);
-      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
-    }
-    30% {
-      clip-path: var(--clip-five);
-      transform: translate(calc(var(--shimmy-distance) * -1%), 0);
-    }
-    35%, 45% {
-      clip-path: var(--clip-six);
-      transform: translate(calc(var(--shimmy-distance) * -1%));
-    }
-    40% {
-      clip-path: var(--clip-six);
-      transform: translate(calc(var(--shimmy-distance) * 1%));
-    }
-    50% {
-      clip-path: var(--clip-six);
-      transform: translate(0, 0);
-    }
-    55% {
-      clip-path: var(--clip-seven);
-      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
-    }
-    60% {
-      clip-path: var(--clip-seven);
-      transform: translate(0, 0);
-    }
-    31%, 61%, 100% {
-      clip-path: var(--clip-four);
-    }
-  }
-  
   .cybr-btn {
     --primary-hue: 8.02;
   }
@@ -376,3 +376,54 @@ footer {
 #about_me_text {
     padding: 0 10% 0 10%;
 }
+
+.o-main-section {
+  margin: 0 10px 0 10px;
+  max-width: rem(600);
+ }
+
+ .c-article__link {
+  align-items: center;
+  color: #d7f9f8;
+  display: flex;
+  justify-content: space-between;
+  margin: rem(30) 0;
+  padding: rem(20);
+  text-decoration: none;
+ 
+  * {
+    pointer-events: none;
+  }
+ }
+
+ .c-article__heading {
+  font-size: rem(20);
+  margin: rem(10) 0;
+ }
+
+ .c-article__content {
+  line-height: 1.5;
+  margin: 0 0 0 25px;
+ }
+
+ .c-article__img-wrapper {
+  height: rem(100);
+  margin-left: rem(20);
+  min-width: rem(160);
+  width: rem(160);
+ }
+
+ .c-article__img {
+  border-radius: rem(2);
+  display: block;
+  height: 100%;
+  filter: grayscale(1);
+  object-fit: cover;
+  transition: filter 0.3s ease-in;
+  width: 100%;
+ 
+  .c-article__link:hover & {
+    filter: grayscale(0);
+  }
+ }
+ 
