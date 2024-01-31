@@ -334,7 +334,7 @@ p, h1 {
 
 .o-main-section {
   margin: 0 10px 0 10px;
-  max-width: rem(600);
+  max-width: 600rem;
  }
 
  .c-article__link {
