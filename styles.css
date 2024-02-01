@@ -327,7 +327,7 @@ p, h1 {
 
 /* ABOUT ME PAGE ELEMENTS */
 #about_me_text {
-  padding: 0 10% 0 10%;
+  padding: 0 0 0 1%;
 }
 
 /* PROJECTS PAGE ELEMENTS */
@@ -342,18 +342,11 @@ p, h1 {
   color: #d7f9f8;
   display: flex;
   justify-content: space-between;
-  margin: rem(30) 0;
-  padding: rem(20);
   text-decoration: none;
  
   * {
     pointer-events: none;
   }
- }
-
- .c-article__heading {
-  font-size: rem(20);
-  margin: rem(10) 0;
  }
 
  .c-article__content {
@@ -362,14 +355,14 @@ p, h1 {
  }
 
  .c-article__img-wrapper {
-  height: rem(100);
-  margin-left: rem(20);
-  min-width: rem(160);
-  width: rem(160);
+  height: 100rem;
+  margin-left: 20rem;
+  min-width: 160rem;
+  width: 160rem;
  }
 
  .c-article__img {
-  border-radius: rem(2);
+  border-radius: 2rem;
   display: block;
   height: 100%;
   filter: grayscale(1);
