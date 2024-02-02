@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    lol.
+Documentation    Test suite designed to assure the functionality of all web elements within this CSS final project.
 
 Resource    RESOURCES/keywords.resource
 
